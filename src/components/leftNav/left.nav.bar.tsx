@@ -1,10 +1,10 @@
 import { Avatar } from "@mui/material";
 import { useState } from "react";
-import homeIcon from "../assets/images/codicon_home.png";
-import messageIcon from "../assets/images/Vector.png";
-import bellIcon from "../assets/images/bx_bell.png";
-import settingsIcon from "../assets/images/ci_settings.png";
-import exitIcon from "../assets/images/majesticons_door-exit.png";
+import homeIcon from "../../assets/images/codicon_home.png";
+import messageIcon from "../../assets/images/Vector.png";
+import bellIcon from "../../assets/images/bx_bell.png";
+import settingsIcon from "../../assets/images/ci_settings.png";
+import exitIcon from "../../assets/images/majesticons_door-exit.png";
 import LeftNavBarLink from "./left.nav.bar.link";
 
 const LeftNavBar = () => {

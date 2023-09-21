@@ -1,5 +1,5 @@
 import FriendsUserList from "./friends.user.list";
-import SearchBar from "./search.bar";
+import SearchBar from "../search.bar";
 
 const FriendsBarContainer = () => {
   return (

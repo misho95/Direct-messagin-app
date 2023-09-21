@@ -1,9 +1,9 @@
 import { Avatar } from "@mui/material";
-import seenIcon from "../assets/images/charm_tick-double.png";
+import seenIcon from "../../assets/images/charm_tick-double.png";
 
 const FriendsUserList = () => {
   return (
-    <div className="flex justify-between items-center border-b-px1 border-neutral-300 pb-3">
+    <div className="flex justify-between items-center border-b-px1 border-neutral-300 pb-3 select-none">
       <div className="flex gap-5">
         <Avatar
           alt="Remy Sharp"
