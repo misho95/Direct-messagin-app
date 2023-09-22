@@ -9,16 +9,20 @@ export default {
         purpleHover: "#612DD1",
         purpleDark: "#5322BC",
         yellow: "#F3B559",
+        lightBlue: "#EFF6FC",
       },
       width: {
+        w952: "952px",
         w537: "537px",
         w133: "133px",
+        w78: "78px",
         w50: "50px",
         w7: "7px",
       },
       height: {
         h98: "98px",
         h79: "79px",
+        h78: "78px",
         h50: "50px",
       },
       borderWidth: {
