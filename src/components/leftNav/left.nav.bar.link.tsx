@@ -1,18 +1,14 @@
 import { Link } from "react-router-dom";
 
-const LeftNavBarLink = ({ id, activeLink, link, icon, setActiveLink }) => {
+const LeftNavBarLink = ({ id, link, icon }) => {
   return (
     <Link
       to={link}
-      onClick={() => setActiveLink(id)}
-      className={`${
-        id === activeLink ? "bg-purpleHover" : ""
-      } w-full h-h98 flex justify-center items-center relative`}
+      className={`w-20 lg:w-full h-20 lg:h-h98 flex justify-center items-center relative group lg:hover:bg-purpleHover`}
     >
       <img src={icon} className="select-none" />
-      {id === activeLink && (
-        <div className="absolute right-0 h-full w-w7 bg-yellow"></div>
-      )}
+
+      <div className="absolute bottom-0 lg:right-0 h-h7 lg:h-full  w-full sm:w-w7 bg-yellow hidden lg:group-hover:flex"></div>
     </Link>
   );
 };

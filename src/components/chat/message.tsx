@@ -13,7 +13,7 @@ const Message = ({ type, message }) => {
       <div
         className={`flex flex-col gap-1 ${
           type === "recive" ? "items-start" : "items-end"
-        } relative`}
+        } relative w-full`}
       >
         <div
           onClick={() => setShowTime(!showTime)}
@@ -23,7 +23,15 @@ const Message = ({ type, message }) => {
         >
           {message}
         </div>
-        {showTime && <div className="text-black/50">Today, 8.34pm</div>}
+        {showTime && (
+          <div
+            className={`text-black/50 absolute ${
+              type === "recive" ? "-bottom-7 left-3" : "-bottom-7 right-3"
+            } w-fit`}
+          >
+            Today, 8.34pm
+          </div>
+        )}
         <div
           className={`w-fit h-fit absolute ${
             type === "recive" ? "-left-4 -bottom-4" : "-right-4 -bottom-4"

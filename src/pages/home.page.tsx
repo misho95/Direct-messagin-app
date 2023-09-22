@@ -4,7 +4,7 @@ import LeftNavBar from "../components/leftNav/left.nav.bar";
 
 const HomePage = () => {
   return (
-    <div className="w-full h-screen bg-gray p-10 flex gap-10 justify-center items-center">
+    <div className="w-full min-h-screen lg:h-screen bg-gray p-10 flex flex-col lg:flex-row gap-10 justify-center items-center">
       <LeftNavBar />
       <FriendsBarContainer />
       <ChatMessageComponent />

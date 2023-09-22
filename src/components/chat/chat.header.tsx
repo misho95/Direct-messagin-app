@@ -5,7 +5,7 @@ import dotsIcon from "../../assets/images/bi_three-dots-vertical.png";
 
 const ChatHeader = () => {
   return (
-    <div className="flex justify-between items-center gap-10 border-b-px1 border-neutral-300 pb-8">
+    <div className="flex flex-col sm:flex-row justify-between items-center gap-10 border-b-px1 border-neutral-300 pb-8">
       <div className="flex gap-5 justify-center items-center select-none">
         <Avatar
           alt="Remy Sharp"

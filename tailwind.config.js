@@ -13,6 +13,7 @@ export default {
       },
       width: {
         w952: "952px",
+
         w537: "537px",
         w133: "133px",
         w78: "78px",
@@ -21,16 +22,18 @@ export default {
         w7: "7px",
       },
       height: {
+        h730: "730px",
         h98: "98px",
         h79: "79px",
         h78: "78px",
         h50: "50px",
         h30: "30px",
+        h7: "7px",
       },
       borderWidth: {
         px1: "1px",
       },
     },
   },
-  plugins: [],
+  plugins: [require("tailwind-scrollbar")],
 };

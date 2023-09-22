@@ -1,9 +1,15 @@
 import { Avatar } from "@mui/material";
 import seenIcon from "../../assets/images/charm_tick-double.png";
+import { activeFriend } from "../../utils/zustand";
 
-const FriendsUserList = ({ type }) => {
+const FriendsUserList = ({ id, type }) => {
+  const setActiveFriend = activeFriend((state) => state.setActive);
+
   return (
-    <div className="flex justify-between items-center border-b-px1 border-neutral-300 pb-3 select-none">
+    <div
+      onClick={() => setActiveFriend(id)}
+      className="flex justify-between items-center border-b-px1 border-neutral-300 pb-3 select-none cursor-pointer"
+    >
       <div className="flex gap-5">
         <Avatar
           alt="Remy Sharp"
@@ -18,9 +24,9 @@ const FriendsUserList = ({ type }) => {
       <div className="flex flex-col gap-1 justify-center items-end">
         <p className="text-black/50">Today, 9.52pm</p>
         {type === "seen" && <img src={seenIcon} className="w-fit h-fit" />}
-        {type === "notif" && (
+        {typeof type === "number" && (
           <div className="bg-red-500 rounded-full w-w30 h-h30 flex justify-center items-center text-white text-lg">
-            5
+            {type}
           </div>
         )}
       </div>
