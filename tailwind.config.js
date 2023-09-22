@@ -17,6 +17,7 @@ export default {
         w133: "133px",
         w78: "78px",
         w50: "50px",
+        w30: "30px",
         w7: "7px",
       },
       height: {
@@ -24,6 +25,7 @@ export default {
         h79: "79px",
         h78: "78px",
         h50: "50px",
+        h30: "30px",
       },
       borderWidth: {
         px1: "1px",

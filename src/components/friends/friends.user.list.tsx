@@ -1,7 +1,7 @@
 import { Avatar } from "@mui/material";
 import seenIcon from "../../assets/images/charm_tick-double.png";
 
-const FriendsUserList = () => {
+const FriendsUserList = ({ type }) => {
   return (
     <div className="flex justify-between items-center border-b-px1 border-neutral-300 pb-3 select-none">
       <div className="flex gap-5">
@@ -15,9 +15,14 @@ const FriendsUserList = () => {
           <p className="text-lg text-black/70">Aprul fool's day</p>
         </div>
       </div>
-      <div className="flex flex-col justify-center items-end">
+      <div className="flex flex-col gap-1 justify-center items-end">
         <p className="text-black/50">Today, 9.52pm</p>
-        <img src={seenIcon} className="w-fit h-fit" />
+        {type === "seen" && <img src={seenIcon} className="w-fit h-fit" />}
+        {type === "notif" && (
+          <div className="bg-red-500 rounded-full w-w30 h-h30 flex justify-center items-center text-white text-lg">
+            5
+          </div>
+        )}
       </div>
     </div>
   );
