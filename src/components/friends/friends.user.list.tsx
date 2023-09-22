@@ -2,7 +2,12 @@ import { Avatar } from "@mui/material";
 import seenIcon from "../../assets/images/charm_tick-double.png";
 import { activeFriend } from "../../utils/zustand";
 
-const FriendsUserList = ({ id, type }) => {
+interface PropsType {
+  id: number;
+  type: string | number | null;
+}
+
+const FriendsUserList = ({ id, type }: PropsType) => {
   const setActiveFriend = activeFriend((state) => state.setActive);
 
   return (

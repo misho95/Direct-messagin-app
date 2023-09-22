@@ -1,7 +1,12 @@
 import { useRef, useEffect } from "react";
+import { ReactNode } from "react";
 
-const MessagesContainer = ({ children }) => {
-  const chatContainerRef = useRef(null);
+interface PropsType {
+  children: ReactNode;
+}
+
+const MessagesContainer = ({ children }: PropsType) => {
+  const chatContainerRef = useRef<null | HTMLDivElement>(null);
   const scrollToBottom = () => {
     if (chatContainerRef.current) {
       chatContainerRef.current.scrollTop =

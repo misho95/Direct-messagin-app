@@ -1,7 +1,12 @@
 import { Avatar } from "@mui/material";
 import { useState } from "react";
 
-const Message = ({ type, message }) => {
+interface PropsType {
+  type: string;
+  message: string;
+}
+
+const Message = ({ type, message }: PropsType) => {
   const [showTime, setShowTime] = useState(false);
 
   return (

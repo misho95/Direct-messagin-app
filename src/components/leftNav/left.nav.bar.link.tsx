@@ -1,10 +1,15 @@
 import { Link } from "react-router-dom";
 
-const LeftNavBarLink = ({ id, link, icon }) => {
+interface PropsType {
+  link: string;
+  icon: string;
+}
+
+const LeftNavBarLink = ({ link, icon }: PropsType) => {
   return (
     <Link
       to={link}
-      className={`w-20 lg:w-full h-20 lg:h-h98 flex justify-center items-center relative group lg:hover:bg-purpleHover`}
+      className={`w-10 lg:w-full h-10 lg:h-h98 flex justify-center items-center relative group lg:hover:bg-purpleHover`}
     >
       <img src={icon} className="select-none" />
 
