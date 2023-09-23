@@ -12,7 +12,7 @@ const ChatMessageComponent = () => {
   }
 
   return (
-    <div className="bg-white w-full lg:w-w952 h-full rounded-lg relative border-2 border-neutral-300 p-5 flex flex-col justify-between">
+    <div className="bg-white w-full lg:w-w952 h-h650 sm:h-full rounded-lg relative border-2 border-neutral-300 p-5 flex flex-col justify-between">
       <ChatHeader />
       <MessagesContainer>
         <Message type={"recive"} message={"Hey There!"} />

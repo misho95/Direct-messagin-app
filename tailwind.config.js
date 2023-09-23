@@ -23,6 +23,8 @@ export default {
       },
       height: {
         h730: "730px",
+        h650: "650px",
+        h540: "540px",
         h98: "98px",
         h79: "79px",
         h78: "78px",

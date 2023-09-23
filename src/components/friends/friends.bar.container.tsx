@@ -12,7 +12,7 @@ const FriendsBarContainer = () => {
       } w-full sm:w-w537 h-full flex-col gap-10`}
     >
       <SearchBar />
-      <div className="bg-white w-full h-h730 rounded-lg relative border-2 border-neutral-300 p-5 flex flex-col gap-5">
+      <div className="bg-white w-full h-h540 sm:h-h730 rounded-lg relative border-2 border-neutral-300 p-5 flex flex-col gap-5">
         <h1 className="text-4xl text-black/70 select-none">FRIENDS</h1>
         <div className="flex flex-col gap-5 overflow-y-auto scrollbar-thin">
           <FriendsUserList
