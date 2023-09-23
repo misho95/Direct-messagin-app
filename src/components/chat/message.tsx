@@ -1,12 +1,13 @@
-import { Avatar } from "@mui/material";
+import { Avatar, AvatarGroup } from "@mui/material";
 import { useState } from "react";
 
 interface PropsType {
   type: string;
   message: string;
+  seen: boolean;
 }
 
-const Message = ({ type, message }: PropsType) => {
+const Message = ({ type, message, seen }: PropsType) => {
   const [showTime, setShowTime] = useState(false);
 
   return (
@@ -21,7 +22,7 @@ const Message = ({ type, message }: PropsType) => {
         } relative w-full`}
       >
         <div
-          onClick={() => setShowTime(!showTime)}
+          onClick={() => seen && setShowTime(!showTime)}
           className={`${
             type === "recive" ? "bg-gray text-black" : "bg-purple text-white"
           } w-fit h-fit p-3 rounded-2xl`}
@@ -37,16 +38,22 @@ const Message = ({ type, message }: PropsType) => {
             Today, 8.34pm
           </div>
         )}
+
         <div
           className={`w-fit h-fit absolute ${
-            type === "recive" ? "-left-4 -bottom-4" : "-right-4 -bottom-4"
+            type === "recive" ? "-left-4 -bottom-6" : "-right-4 -bottom-6"
           }`}
         >
-          <Avatar
-            alt="Remy Sharp"
-            src="https://www.beautycrew.com.au/media/54105/jodie-comer-most-beautiful-woman-l.png?width=1150"
-            sx={{ width: 18, height: 18 }}
-          />
+          {seen && (
+            <AvatarGroup max={3}>
+              <Avatar
+                alt="Remy Sharp"
+                src="https://www.beautycrew.com.au/media/54105/jodie-comer-most-beautiful-woman-l.png?width=1150"
+                sx={{ width: 18, height: 18 }}
+              />
+            </AvatarGroup>
+          )}
+          {!seen && <div className="text-sm text-black/50">Sent 6 min ago</div>}
         </div>
       </div>
     </div>
