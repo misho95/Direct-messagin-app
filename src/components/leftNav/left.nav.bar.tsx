@@ -24,7 +24,7 @@ const LeftNavBar = () => {
         </div>
         <div className="w-full flex flex-row lg:flex-col">
           <LeftNavBarLink link={"/"} icon={bellIcon} notif={6} />
-          <LeftNavBarLink link={"/"} icon={settingsIcon} notif={null} />
+          <LeftNavBarLink link={"/"} icon={settingsIcon} notif={0} />
         </div>
       </div>
       <button className="p-2 w-fit h-fit">

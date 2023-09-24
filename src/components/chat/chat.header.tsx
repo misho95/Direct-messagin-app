@@ -1,6 +1,4 @@
 import { Avatar } from "@mui/material";
-import callIcon from "../../assets/images/ci_phone-outline.png";
-import cameraIcon from "../../assets/images/fluent_video-16-regular.png";
 import dotsIcon from "../../assets/images/bi_three-dots-vertical.png";
 import { activeFriend } from "../../utils/zustand";
 
